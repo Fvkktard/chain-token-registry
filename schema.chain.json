@@ -1,5 +1,59 @@
 {
-  "$id": "https://evmos.org/schema.token.json",
+	"chainId": "yymm_585858-1",
+	"chainName": "YYMM",
+	"rpc": "https://yymm-jsonrpc.testnet.bitverse.zone",
+	"rest": "https://yymm-rest.testnet.bitverse.zone",
+	"bip44": {
+		"coinType": 60
+	},
+	"coinType": 60,
+	"bech32Config": {
+		"bech32PrefixAccAddr": "yymm",
+		"bech32PrefixAccPub": "yymmpub",
+		"bech32PrefixValAddr": "yymmvaloper",
+		"bech32PrefixValPub": "yymmvaloperpub",
+		"bech32PrefixConsAddr": "yymmvalcons",
+		"bech32PrefixConsPub": "yymmvalconspub"
+	},
+	"currencies": [
+		{
+			"coinDenom": "BV",
+			"coinMinimalDenom": "ubv",
+			"coinDecimals": 18,
+			"coinGeckoId": "unknown"
+		}
+	],
+	"feeCurrencies": [
+		{
+			"coinDenom": "BV",
+			"coinMinimalDenom": "ubv",
+			"coinDecimals": 18,
+			"coinGeckoId": "unknown",
+			"gasPriceStep": {
+				"low": 0.01,
+				"average": 0.025,
+				"high": 0.03
+			}
+		}
+	],
+	"gasPriceStep": {
+		"low": 0.01,
+		"average": 0.025,
+		"high": 0.03
+	},
+	"stakeCurrency": {
+		"coinDenom": "BV",
+		"coinMinimalDenom": "ubv",
+		"coinDecimals": 18,
+		"coinGeckoId": "unknown"
+	},
+	"features": [
+		"ibc-transfer",
+		"ibc-go",
+		"eth-address-gen",
+		"eth-key-sign"
+	]
+}{  "$id": "https://evmos.org/schema.token.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "Chain Registry via Evmos Governance",
   "type": "object",
